@@ -1,18 +1,13 @@
-﻿using Firedump.models.configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 using Firedump.models.configuration.jsonconfig;
-using System.ServiceProcess;
-using System.IO;
-using System.Diagnostics;
 using Topshelf;
 using Firedump.service;
 using System.Threading;
 using Topshelf.ServiceConfigurators;
 using Firedump.Forms;
+using Microsoft.Win32;
+using Firedump.utils;
 
 namespace Firedump
 {
@@ -30,8 +25,8 @@ namespace Firedump
         /// </summary>
         [STAThread]
         static void Main(string[] args)
-        {          
-            
+        {
+            RegistryUtils.registerPath();
             if (args.Length == 0)
             {
                 Application.EnableVisualStyles();

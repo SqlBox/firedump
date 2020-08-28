@@ -432,6 +432,7 @@
     <Compile Include="models\databaseUtils\SqlUtils.cs" />
     <Compile Include="utils\EncryptionUtils.cs" />
     <Compile Include="utils\OS.cs" />
+    <Compile Include="utils\RegistryUtils.cs" />
     <Compile Include="utils\StringUtils.cs" />
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
